@@ -1,7 +1,5 @@
 ###Set up
 #save all files to Scrath folder using code below, plus 
-# desired file name
-#outFC= "V:\\ENV859_PS4\\Scratch\\filename"
 
 import arcpy
 #Task 1a
@@ -12,3 +10,5 @@ distance = "1000 meters"
 
 #create buffer 
 arcpy.analysis.Buffer(streams,outFC,distance,"","","ALL")
+
+print(arcpy.GetMessages())
