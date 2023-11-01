@@ -7,8 +7,8 @@ arcpy.env.overwriteOutput = True
 
 #set variables
 streams = "V:\\ENV859_PS4\\Data\\streams.shp"
-outFC = sys.argv[1]
-distance = sys.argv[2]
+outFC = sys.argv[0]
+distance = sys.argv[1]
 
 arcpy.env.workspace = os.path.join("V:\\ENV859_PS4\\Data", streams)
 
