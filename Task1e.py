@@ -9,13 +9,15 @@ arcpy.env.overwriteOutput = True
 
 #set variables
 streams = "V:\\ENV859_PS4\\Data\\streams.shp"
-distance = [100, 200, 300, 400, 500]
+distance = ["100", "200" ,"300", "400","500"]
 
-for distance in range (5):
-    distance[+1],
-    outFC = str("V:\\ENV859_PS4\\Scratch\\buff_"+ distance +"m.shp"),
-    #create buffer 
-    arcpy.analysis.Buffer(streams,outFC,distance,"","","ALL")
+for i in distance:
+    outFC = "V:\\ENV859_PS4\\Scratch\\buff_{}m.shp".format(distance)
 
 
-print(arcpy.GetMessages())
+
+#create buffer 
+arcpy.analysis.Buffer(streams,outFC,distance,"","","ALL")
+
+
+#dont use a json file for 4 & 5  
