@@ -9,17 +9,10 @@ arcpy.env.overwriteOutput = True
 
 #set variables
 streams = "V:\\ENV859_PS4\\Data\\streams.shp"
-
-
-for i in range (5):
-    distance = (sys.argv[1]),
-    outFC = str("V:\\ENV859_PS4\\Scratch\\buff_"+ sys.argv[3] +"m.shp"),
-    print(distance)
+distance = sys.argv[2]
+outFC = "V:\\ENV859_PS4\\Scratch\\buff_{}m.shp".format(distance)
 
 
 
 #create buffer 
 arcpy.analysis.Buffer(streams,outFC,distance,"","","ALL")
-
-
-print(arcpy.GetMessages())
