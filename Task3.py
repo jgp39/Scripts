@@ -17,6 +17,6 @@ output_FC= "V:\\ENV859_PS4\\Scratch"
 #Loop through BMR list to create new folders
 for file in BMR:
     filename= file[:-4]
-    arcpy.management.CreateFolder(output_FC, filename)
+    final_output= arcpy.management.CreateFolder(output_FC, filename)
     input_FC= file
-    arcpy.Split_analysis(input_FC,"V:\\ENV859_PS4\\Data\\TriCounties.shp", "CO_NAME", output_FC, )
+    arcpy.Split_analysis(input_FC,"V:\\ENV859_PS4\\Data\\TriCounties.shp", "CO_NAME", final_output, )
