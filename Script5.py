@@ -9,8 +9,8 @@ field_name= arcpy.GetParameterAsText(1)
 myPoint= arcpy.Point(X=621000,Y=254000)
 
 #Creating my own SearchCursor
-lookup = arcpy.da.SearchCursor(feature_class, ['SHAPE@', field_name])
-
-#for i in lookup:
- #   recShape = 'Shape@'
-  #  print(feature.contains(myPoint))
+with arcpy.da.SearchCursor(feature_class, ['Shape@', field_name]) as cursor:
+    for i in cursor:
+        recShape,field_value = i
+        if recShape is not None and recShape.contains(myPoint):
+            arcpy.AddMessage(f"The field's value is {field_value}.")
