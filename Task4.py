@@ -30,4 +30,4 @@ except arcpy.ExecuteError:
 except Exception as e:
     arcpy.AddError(str(e))
 
-##I used a significant amount of ChatGPT and google to assist me with this Task. Due to the hours I was up working on this, there was no one around me to ask for assistance. 
+##I used a significant amount of ChatGPT and google to assist me with this Task. Due to the hours I was up working on this, there was no one around me to ask for assistance. Despite watching the videos and looking back at old practice sets, I was unable to finish this task without ChatGPT.
